@@ -1,0 +1,53 @@
+.header_body{
+  display: flex;
+  height: 70px;
+  align-items: center;
+  /* position: fixed; */
+  background-color: #070F2B;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.logo{
+  display: flex;
+  flex-grow: 1;
+  margin: 0 30px;
+}
+
+.hyperlink{
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.hyperlink a{
+  margin: 0 20px;
+  color: white ; 
+  font-weight: 700;
+}
+
+.hyperlink a:hover{
+  color:#FED9ED;
+}
+
+
+.header_img{
+  width: 65px;
+  height: 65px;
+  display: block;
+  position: absolute;
+  top:5px
+}
+
+/* 여기 고쳐야됨 */
+.bg_logo{
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  background-color:  #C3F0CA;
+  z-index: 9;
+}
