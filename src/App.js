@@ -5,6 +5,7 @@ import Profile from './Component/Profile';
 import Strength from './Component/Strength';
 import Activity from './Component/Activity';
 import Footer from './Component/Footer';
+import Favorite from './Component/Favorite';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Strength></Strength>
       <div id="activity_title">My Activity</div>
       <Activity></Activity>
-      <Footer></Footer>
+      <Favorite></Favorite>
     </div>
   );
 }
