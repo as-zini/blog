@@ -1,0 +1,120 @@
+.posting_body{
+  background-color: rgba(7, 15, 43, 1);
+  width: vw;
+  height: 788px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.posting_box{
+  background-color: rgba(7, 15, 43, .8);
+  width: 1000px;
+  margin: auto;
+  height: 650px;
+  position: relative;
+  /* top: 50px; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.posting_title{
+  border: none;
+  /* background-color: rgba(255,255,255,.3); */
+  font-size: 40px;
+  color: #FFEEF4;
+  font-weight: 900;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background: #070f2b;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: solid #FFEEF4 2px;
+ }
+
+textarea{
+  border: none;
+  /* background-color: #070F2B; */
+  background-color: rgba(255,255,255,.3);
+  color: lightgray;
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 30px;
+  background: none;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.filebox .upload-name {
+  display: inline-block;
+  height: 40px;
+  padding: 0 10px;
+  vertical-align: middle;
+  border: 1px solid #dddddd;
+  width: 78%;
+  color: #999999;
+  border-radius: 3px;
+  background-color: #070f2b;
+}
+
+.filebox label {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #999999;
+  cursor: pointer;
+  height: 20px;
+  margin-left: 10px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.post_buttons{
+  position: relative;
+  left: 1050px;
+  bottom: 20px;
+  box-sizing: border-box;
+}
+
+.post_buttons button{
+  width: 70px;
+  height: 30px;
+  margin-left: 15px;
+  border: none;
+  font-weight: 900;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+.post_buttons button:hover{
+  background: none;
+  color: #FED9ED;
+}
+
+.temporary_button{
+  background: none;
+  color: white;
+}
+
+.post_button{
+  background-color: #FFEEF4 ;
+  color: #070f2b;
+}

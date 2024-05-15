@@ -10,10 +10,10 @@ export default function Header () {
         </a>
       </div>
       <div className="hyperlink">
-        <a id="home" href="../App.js" >Home</a>
-        <a id="profile" href="./Profile.js">Profile</a>
-        <a id="activity" href="./Activity.js">Activity</a>
-        <a id="project" href="javascript:void(0)">Project</a>
+        <a id="home" href="../Home" >Home</a>
+        <a id="profile" href="./Posting">Posting</a>
+        <a id="activity" href="./Posts">View Posts</a>
+        {/* <a id="project" href="javascript:void(0)">Project</a> */}
       </div>
     </div>
   )
