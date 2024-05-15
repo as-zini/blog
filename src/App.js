@@ -16,7 +16,7 @@ function App() {
       <Strength></Strength>
       <div id="activity_title">My Activity</div>
       <Activity></Activity>
-      <Favorite></Favorite>
+      {/* <Favorite></Favorite> */}
     </div>
   );
 }
