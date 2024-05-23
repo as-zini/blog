@@ -48,6 +48,7 @@
 
 .view_posts{
   font-weight: 700;
+  opacity: 0;
 }
 
 .post_summary{
