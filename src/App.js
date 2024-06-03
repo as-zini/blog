@@ -10,16 +10,14 @@ import { createContext } from 'react';
 
 export const AppContext = createContext();
 
-const dark = {
-  darkMode: "true",
-}
-
 function App() {
-
+  const user = {
+    login: false
+  }
   
 
   return (
-    <AppContext.Provider value={dark}>
+    <AppContext.Provider value={user}>
       <div className='body'>
         <Header></Header>
         <Intro></Intro>

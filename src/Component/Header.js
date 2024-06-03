@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import "./Header.css"
 import { AppContext } from "../App.js";
 
@@ -8,10 +8,14 @@ export default function Header () {
   
   return(
     <div className="header_body">
-      <div className="logo">
+      {/* <div className="logo">
         <a  href="../App.js">
           <div className=""></div>
         </a>
+      </div> */}
+      <div className="sign_up_body">
+        <a id="sign_up" href="./Sign-up">Sign up</a>
+        <a id="log_in" href="./Log-in">Log in</a>
       </div>
       <div className="hyperlink">
         <a id="home" href="../Home" >Home</a>

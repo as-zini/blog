@@ -1,9 +1,12 @@
 import { useState } from "react"
 import "./Posting.css"
+import { memberApi } from "../Api/signup";
+import { useCookies } from "react-cookie";
 
 export default function Posting(){
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState('');
+  const [cookies, setCookie, removeCookie] = useCookies();
   
   function handleTitleChange(e){
     console.log(title);
@@ -13,6 +16,25 @@ export default function Posting(){
   function handleContentsChange(e){
     console.log(contents);
     setContents(e.target.value);
+  }
+
+  const handleClick = async () => {
+    try{
+      const response = await memberApi.post('/blog/',{
+        "title" : title,
+        "body" : contents
+      },{headers:{
+        Authorization: "Bearer {Access_token}"
+      }});
+      console.log(response.data)
+      localStorage.setItem("token", response.data.token);
+      sessionStorage.setItem("token", response.data.token);
+      setCookie("token", response.data.token);
+      return response.data;
+    } catch(error){
+      console.log(error)
+      return error;
+    }
   }
 
   return(
@@ -31,7 +53,7 @@ export default function Posting(){
       <div className="post_buttons">
         
         <button className="temporary_button">임시 저장</button>
-        <button className="post_button">글쓰기</button>
+        <button className="post_button" onClick={handleClick}>글쓰기</button>
       </div>
     </div>
   )

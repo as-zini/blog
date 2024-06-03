@@ -10,7 +10,7 @@ export default function Intro () {
         <img className="intro_img" src={profile_img}></img>
       </div>
       <div className="intro_text">
-        성장을 두려워하지 않는 개발자,<br></br>황지현입니다.
+        welcome to my blog<br></br>
       </div>
     </div>
   )
