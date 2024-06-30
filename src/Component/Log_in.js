@@ -1,16 +1,20 @@
-import { useState } from "react"
+import { useContext, useState, useSyncExternalStore } from "react"
 import styled from "styled-components"
-import { apiCall } from "../Api";
 import { useCookies } from "react-cookie";
 import CompleteLogin from "./CompleteLogin";
 import { memberApi } from "../Api/signup";
+import { useNavigate } from "react-router-dom";
+import useStore from "../store/store";
+import Home from "./Home";
 
 export default function Login_component (){
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [cookies, setCookie, removeCookie] = useCookies();
-  const [success, setSuccess] = useState(false);
-
+  // const [success, setSuccess] = useState(false);
+  const navigate = useNavigate()
+  const isLogin = useStore((state) => state.isLogin)
+  const login = useStore((state) => state.login)
   function handleIdChange(e){
     setId(e.target.value);
   }
@@ -26,10 +30,13 @@ export default function Login_component (){
         password: password,
       });
       console.log(response.data)
-      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("token", response.data.access);
       sessionStorage.setItem("token", response.data.token);
       setCookie("token", response.data.token);
-      setSuccess(true);
+      // setSuccess(true);
+      login()
+      console.log(isLogin);
+      // navigate("/")
       return response.data;
 
     } catch(error){
@@ -39,12 +46,12 @@ export default function Login_component (){
     }
   }
 
-  if(success){
-    return(
-      <CompleteLogin></CompleteLogin>
-    )
+  // if(isLogin){
+  //   return(
+  //     <Home></Home>
+  //   )
 
-  }
+  // }
 
   return(
     <LoginBody>

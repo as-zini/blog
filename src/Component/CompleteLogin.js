@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { styled } from "styled-components"
-import { AppContext } from "../App"
 
 export default function CompleteLogin(){
 

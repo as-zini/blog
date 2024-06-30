@@ -83,7 +83,7 @@ export default function Sign_up () {
           <University placeholder="소속 대학교를 입력하세요" value={university} onChange={handleUniversityChange}></University>
           <Location placeholder="소속 대학교의 지역을 입력하세요" value={location} onChange={handleLocationChange}></Location>
           <SignUpButton onClick={handleClick}>가입하기</SignUpButton>
-          <GoLogIn>이미 회원이신가요?<a href="/Log-in">로그인 페이지로 이동</a></GoLogIn>
+          <GoLogIn>이미 회원이신가요?<a href="/">로그인 페이지로 이동</a></GoLogIn>
         </SignUpBox>
       </SignUpBody>
   )

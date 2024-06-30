@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,6 +8,8 @@ import Posting from '../src/Routes/Posting'
 import Posts from './Routes/Posts';
 import LogIn from './Routes/login';
 import Signup from './Routes/Signup';
+import Home from './Component/Home';
+
 
 const router = createBrowserRouter([
   {

@@ -61,3 +61,26 @@
   background-color:  #C3F0CA;
   z-index: 9;
 }
+
+.log-out{
+  background-color: #070F2B;
+  border: none;
+  color:white;
+  font-weight: 900;
+}
+.log-out:hover{
+  color:#FED9ED;
+}
+
+#posting{
+  color:white;
+  background:  #070F2B;
+  border: none;
+  font-weight: 900;
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+#posting:hover{
+  color:#FED9ED;
+}

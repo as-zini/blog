@@ -3,7 +3,7 @@ import "./Posting.css"
 import { memberApi } from "../Api/signup";
 import { useCookies } from "react-cookie";
 
-export default function Posting(){
+export default function Posting({setIsPosting, isPosting}){
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState('');
   const [cookies, setCookie, removeCookie] = useCookies();
@@ -19,17 +19,21 @@ export default function Posting(){
   }
 
   const handleClick = async () => {
+    const token = localStorage.getItem("token")
     try{
       const response = await memberApi.post('/blog/',{
         "title" : title,
         "body" : contents
-      },{headers:{
-        Authorization: "Bearer {Access_token}"
+      },{
+        headers:{
+          Authorization: `Bearer ${token}`
       }});
       console.log(response.data)
-      localStorage.setItem("token", response.data.token);
-      sessionStorage.setItem("token", response.data.token);
-      setCookie("token", response.data.token);
+      // localStorage.setItem("token", response.data.token);
+      // sessionStorage.setItem("token", response.data.token);
+      // setCookie("token", response.data.token);
+      setIsPosting(false);
+      console.log(isPosting)
       return response.data;
     } catch(error){
       console.log(error)
